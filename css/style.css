@@ -1,0 +1,586 @@
+:root
+{
+    --main-color:#f25454;
+    --light-gray: #fafafa;
+}
+.bg-main-color
+{
+    background-color: var(--main-color);
+}
+.bg-light-gray
+{
+    background-color: var(--light-gray);
+}
+.text-main-color
+{
+    color: var(--main-color);
+}
+body
+{
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    line-height: 1.75em;
+    color: #666;
+}
+h1,h2,h3,h4,h5
+{    
+    font-family: "Poppins", sans-serif;
+    font-weight: bolder;
+}
+a
+{
+    text-decoration: none;
+}
+
+.home .icon
+{
+    width: 150px;
+}
+nav
+{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255,255,255);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;   
+    transition: 0.5s all;
+}
+.navbar-dark .navbar-nav .nav-link.active, .navbar-dark .navbar-nav .show>.nav-link {
+    color: var(--main-color);
+}
+.navbar-dark .navbar-nav .nav-link:hover
+{
+    color: var(--main-color);
+}
+.carousel-item
+{
+    transition: 1s all ease-in-out !important;
+}
+h1
+{
+    font-size:4rem;
+}
+.carousel .container
+{
+    right: -165%;
+    transition:1s ease-out all;
+}
+.carousel-item.active .container
+{
+    right: 0;
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    right: unset;
+    left: unset;
+}
+.carousel a
+{
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid white;
+    opacity: 1;
+}
+.prev-a
+{
+    border-top-right-radius:3px;
+    top: 50%;
+}
+.next-a
+{
+    border-bottom-right-radius:3px;
+    top: calc(50% + 3rem);
+}
+.carousel a:hover
+{
+    background-color: white;
+}
+.carousel a i
+{
+    font-size: 20px;
+    z-index: 2;
+}
+.carousel a::before
+{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left:0;
+    right:100%;
+    transition: 0.5s all ease-in-out;
+    background-color: white;
+}
+
+.carousel a:hover::before
+{
+    right: 0;
+}
+.carousel a:hover i
+{
+    color: var(--main-color);
+}
+.mouse-icon
+{
+    border: 1px solid white;
+    width: 25px;
+    height: 40px;
+    bottom: 5%;
+    z-index: 9;
+    transition: 0.3s all ease-in-out;
+}
+.mouse-icon:hover
+{
+    border:1px solid var(--main-color);
+}
+.mouse-icon::before
+{
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    left: 7px;
+    top: 5px;
+    animation-name: fall;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+@keyframes fall{
+    from{opacity: 1; top:5px;}
+    to{opacity: 0; top:20px;}
+}
+.setting-icon
+{
+    top:20%;
+    background-color: #1f2528;
+    width: 40px;
+    height: 40px;
+    z-index: 1000;
+    transition: 0.5s all;
+}
+.setting-icon:hover
+{
+    background-color:#434343;
+}
+.btn
+{
+    width: 23px;
+    height: 25px;
+}
+.btn .member
+{
+    height: 3px;
+    background-color: white;
+    transition: 0.5s all;
+}
+.btn:hover .member
+{
+    background-color: var(--main-color);
+}
+.navbar-dark .navbar-toggler
+{
+    border: none;
+}
+
+
+
+
+
+
+
+
+
+
+header p
+{
+    font-size: 18px;
+    color: #999;
+}
+h2
+{
+    font-size: 2.5rem;
+    line-height: 38px;
+    position: relative;
+    display: inline-block;
+    opacity:0.8;
+}
+h2::before , h2::after
+{
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h2::before
+{
+    font-size: 4.5rem;
+    position: absolute;
+    z-index: -1;
+    bottom: 10px;
+    color:rgba(0,0,0,0.1);
+}
+h2::after
+{
+    content: "";
+    position:absolute;
+    width: 40px;
+    height: 1px;
+    background-color: black;
+    margin: 20px 0;
+    transition: 0.5s all;
+}
+.about h2::before
+{
+    content: "A";
+}
+header:hover h2::after
+{
+    width:60px;
+}
+.progress
+{
+    height: 5px;
+}
+.progress-bar
+{
+    height: 5px;
+}
+
+
+
+
+
+
+
+.team h2::before
+{
+    content: "O";
+}
+.team h5
+{
+    color: #282828;
+    font-size: 1.1rem !important;
+}
+.team .member img
+{
+    transition: 0.5s all;
+}
+.team .member:hover img
+{
+    transform: scale(1.1);
+}
+.team .member h5
+{
+    transition: 0.3s all;
+}
+.team .member:hover h5
+{
+    color: var(--main-color);
+}
+.team .member .layer
+{
+    background-color:rgba(242, 84, 84, 0.85);
+    opacity: 0;
+    transition: opacity 0.3s;
+} 
+.team .member:hover .layer
+{
+    opacity: 1;
+}
+
+
+
+
+.idea a
+{
+    width: 130px;
+    height: 50px;
+    padding-top: 12px;
+}
+.idea h3
+{
+    font-size: 2rem;
+    color: #282828;
+    font-weight: 400;
+}
+
+
+
+
+
+
+.services h2::before
+{
+    content: "S";
+}
+.services h3
+{
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: 0.5s all;
+    color: black;
+}
+.services .member:hover h3
+{
+    color: var(--main-color);
+    opacity: 1;
+}
+.services i
+{
+    font-size: 25px;
+}
+
+
+
+
+
+
+.client-reviews h2::before
+{
+    content: "C";
+}
+.carousel-indicators
+{
+    margin-right: 0;
+    margin-left: 0;
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+
+   /* animation-name: self-rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;*/
+}
+/*@keyframes self-rotate {
+    from{transform: translateX(0)}
+    to{transform: translateX(300px)}
+}*/
+.carousel-indicators [data-bs-target]
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: 0.5s all;
+    margin: 0;
+    position: relative;
+}
+.client-info
+{
+    opacity: 0;
+}
+.client-info h3
+{
+    font-size: 16px;
+}
+.client-info span
+{
+    color: #666;
+    margin-top: 7px;
+    line-height: 1;
+}
+.carousel-indicators .active+.client-info {
+    opacity: 1;
+}
+.carousel-indicators .active
+{
+    width: 120px;
+    height: 120px;
+}
+.carousel-inner p
+{
+    font-size: 25px;
+    line-height: 1.5em;
+}
+
+  
+
+
+
+
+.contact h2::before
+{
+    content: "G";
+}
+.contact h3
+{
+    opacity: 0.9;
+    font-size: 2rem;
+}
+.contact h4
+{
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.9);
+    transition: 0.5s all;
+    font-weight: 600;
+}
+.contact .member:hover h4
+{
+    color: var(--main-color);
+}
+.contact .member i
+{
+    font-size: 35px;
+}
+.contact a
+{
+    color:#444;
+    transition: 0.5s all;
+}
+.contact a:hover
+{
+    color: var(--main-color);
+}
+form input , form textarea
+{
+    line-height: 1 !important;
+    padding: 14px 18px !important;
+    color: #a6a6a6 !important;
+    border-radius: 3px !important;
+    border: 2px solid #eee !important;
+}
+.form-control:focus {
+    color: #a6a6a6 !important;
+    border-color: var(--main-color) !important;
+    box-shadow:unset !important;
+}
+form button
+{
+    padding: 18px 30px !important;
+    line-height: 1 !important;
+    border-radius: 5px !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: all 0.5s !important;
+    background-color: var(--main-color) !important;
+    color: white !important;
+}
+form button:hover
+{
+    background-color:rgba(242, 84, 84, 0.6) !important;
+}
+
+
+
+
+
+
+
+
+footer
+{
+    font-family: "Poppins", sans-serif;
+    color: #b0b0b0;
+    background-color: #222;
+}
+footer .arrow-container
+{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(242, 84, 84, 0.6) ;
+    transition: 0.5s all;
+}
+footer .arrow-container:hover
+{
+    background-color: var(--main-color);
+}
+footer .arrow
+{
+    font-size: 17px;
+    top:14px;
+}
+.footer-content
+{
+    background-image: url(../images/dotted-map.png);
+    background-size: contain;
+    background-position: center center;
+}
+footer h5
+{
+    font-weight: 600;
+}
+.footer-content a
+{
+    color:#b0b0b0;
+    transition: 0.5s all;
+    font-size: 13px;
+}
+.footer-content a:hover
+{
+    color: var(--main-color);
+}
+.tages a
+{
+    border: #b0b0b0 1px solid;
+    transition: 0.5s all;
+    margin:2px;
+}
+.tages a:hover
+{
+    border: var(--main-color) 1px solid;
+}
+footer .copy-right
+{
+    background-color:#1a1a1a;
+}
+footer .copy-right .content a
+{
+    color:white;
+    transition: 0.5s all;
+}
+footer .copy-right .content a:hover
+{
+    color: var(--main-color);
+}
+.social-icons a
+{
+    margin: 0 7px;
+}
+.social-icons a i
+{
+    font-size: 1rem;
+    color:white;
+    transition: 0.5s all;
+}
+.social-icons a i:hover
+{
+    color: var(--main-color);
+}
+
+
+
+
+
+
+
+
+
+@media (max-width:768px) {
+    h1
+    {
+        font-size: 2.5rem;
+    }
+    .mouse-icon , .setting-icon/*".setting-icon deosn't work"*/
+    {
+        display: none;
+    }
+    .navbar-expand-md .navbar-nav {
+        background-color: white;
+    }
+    .navbar-expand-md .navbar-nav .nav-link
+    {
+        color: black;
+    }
+    .idea h3 , .contact h3
+    {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width:992px) {
+    .nav-icons
+    {
+        display: none;
+    }
+}
